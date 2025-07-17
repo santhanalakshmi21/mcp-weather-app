@@ -1,0 +1,1 @@
+{"version":3,"file":"mcp-config.d.ts","sourceRoot":"","sources":["../../server/src/mcp-config.ts"],"names":[],"mappings":"AAGA,MAAM,WAAW,SAAS;IACxB,SAAS,EAAE,OAAO,GAAG,KAAK,CAAC;IAC3B,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,IAAI,CAAC,EAAE,MAAM,CAAC;CACf;AAED,wBAAgB,aAAa,IAAI,SAAS,CAOzC"}

@@ -1,0 +1,38 @@
+{
+  "name": "mcp-weather-app",
+  "version": "1.0.0",
+  "description": "A simple MCP weather app with TypeScript server and client",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:server && npm run build:client && npm run build:simple",
+    "build:server": "tsc -p server/tsconfig.json --outDir dist/server",
+    "build:client": "tsc -p client/tsconfig.json --outDir dist/client",
+    "build:simple": "tsc client/demo.ts --outDir dist/client --target ES2020 --module commonjs && tsc client/simple-weather.ts --outDir dist/client --target ES2020 --module commonjs",
+    "start:server": "node dist/server/index.js",
+    "start:client": "node dist/client/index.js", 
+    "dev:server": "ts-node server/src/index.ts",
+    "dev:client": "ts-node client/src/index.ts",
+    "start": "npm run build:simple && node dist/client/simple-weather.js",
+    "start:compiled": "node dist/client/simple-weather.js",
+    "demo": "npm run build:simple && node dist/client/demo.js",
+    "demo:compiled": "node dist/client/demo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "weather",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0"
+  }
+}
